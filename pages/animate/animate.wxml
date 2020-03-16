@@ -1,0 +1,8 @@
+<view class="flex">
+    <view class="text animated {{animateType}}" bindanimationend='animateEnd'>Animate.CSS</view>
+    <button bindtap="popChange">{{animateTypeBtnText||'选择动画'}}</button>
+    <button bindtap="animateStart">执行动画</button>
+    <van-popup show="{{ show }}" bind:close="popChange" round position="bottom">
+        <van-picker columns="{{ columns }}" bind:change="onChange" show-toolbar='{{true}}' title='选择动画' bindconfirm='selectAnimate' bindcancel='popChange' />
+    </van-popup>
+</view>
